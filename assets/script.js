@@ -508,13 +508,15 @@ container.addEventListener('touchend', function (event) {
 
 
 function handleGesture() {
-    if (touchendX < touchstartX) {
+    nanika = Math.pow((touchendX - touchstartX),2)
+	nanikaa = Math.pow((touchendY - touchstartY),2)
+    if (touchendX < touchstartX && nanika > nanikaa) {
         left();
-    }else if (touchendX > touchstartX) {
+    }else if (touchendX > touchstartX && nanika > nanikaa) {
         right();
-    }else if (touchendY < touchstartY) {
+    }else if (touchendY < touchstartY && nanika < nanikaa) {
        bottom();
-    }else if (touchendY > touchstartY) {
+    }else if (touchendY > touchstartY && nanika < nanikaa) {
         down();
     }
 }
