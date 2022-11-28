@@ -495,32 +495,35 @@ document.addEventListener('keydown', (e) => {
     	holdd()
     }
 });
-let touchstartX = 0
-let touchendX = 0
-let touchstartY = 0
-let touchendY = 0    
+container.addEventListener('touchstart', function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
 
-function checkDirection() {
-  if (touchendX < touchstartX) left();
-  if (touchendX > touchstartX) right();
-  if (touchendY < touchstartY) down();
-  if (touchendX > touchstartX) bottom();
+container.addEventListener('touchend', function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false);
+
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        left();
+    }
+
+    if (touchendX > touchstartX) {
+        right();
+    }
+
+    if (touchendY < touchstartY) {
+       bottom();
+    }
+
+    if (touchendY > touchstartY) {
+        down();
+    }
 }
-
-document.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-})
-document.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  checkDirection()
-})
-document.addEventListener('touchstart', e => {
-  touchstartY = e.changedTouches[0].screenY
-})
-document.addEventListener('touchend', e => {
-  touchendY= e.changedTouches[0].screenY
-  checkDirection();
-})
 updateBlocks();
 /*
 Make bombs
