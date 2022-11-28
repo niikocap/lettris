@@ -510,17 +510,11 @@ container.addEventListener('touchend', function (event) {
 function handleGesture() {
     if (touchendX < touchstartX) {
         left();
-    }
-
-    if (touchendX > touchstartX) {
+    }else if (touchendX > touchstartX) {
         right();
-    }
-
-    if (touchendY < touchstartY) {
+    }else if (touchendY < touchstartY) {
        bottom();
-    }
-
-    if (touchendY > touchstartY) {
+    }else if (touchendY > touchstartY) {
         down();
     }
 }
