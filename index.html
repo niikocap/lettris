@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lettris Game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="container1">
+		<button class="floatLeft"><ion-icon name="arrow-back-sharp"></ion-icon></button>
+		<div class="menu">
+			<button class="pause" onclick="pause(this)"><ion-icon name="pause"></ion-icon></button>
+			<button><ion-icon name="volume-mute"></ion-icon></button>
+			<button><ion-icon name="settings"></ion-icon></button>
+			<img src="assets/img/fullin.svg" alt="" onclick="fstoogle(this)">
+		</div>
+		<div class="sizebox10"></div>
+		<div class="score">0</div>
+		<div class="floatingNotif">
+			<p>Word 'nikko' has been cleared and scored 100pts</p>
+		</div>
+		
+		<div class="next">
+			<div class="nblock iBlock"></div>
+			<div class="nblock iBlock"></div>
+			<div class="nblock iBlock"></div>
+			
+		</div>
+		<div class="gamebody">
+			
+		</div>
+		<div class="controls">
+			<button class="start" onclick="start()">START</button>
+			<button class="left" onclick="left()"><ion-icon name="caret-back"></ion-icon></button>
+			<button class="right" onclick="right()"><ion-icon name="caret-forward"></ion-icon></button>
+			<button class="down" onclick="down()" ondblclick="bottom()"><ion-icon name="caret-down"></ion-icon></button>
+			<button class="" onclick="holdd()">HOLD</button>
+		</div>
+		<div class="hold">
+			<div class="hblock iBlock"></div>
+		</div>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script type="text/javascript" src="assets/dictionary.js"></script>
+	<script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
