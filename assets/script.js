@@ -501,12 +501,13 @@ container.addEventListener('touchstart', function (event) {
 
 container.addEventListener('touchend', function (event) {
     touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
+    touchendY = event.changedTouches[0].screenY;	
     handleGesture();
 }, false);
 function handleGesture() {
     nanika = Math.pow((touchendX - touchstartX),2)
 	nanikaa = Math.pow((touchendY - touchstartY),2)
+	if(detectDoubleTapClosure()) return;
     if (touchendX < touchstartX && nanika > nanikaa) {
         left();
     }else if (touchendX > touchstartX && nanika > nanikaa) {
@@ -525,10 +526,25 @@ function playGame(){
 		createBlocks();
 		updateBlocks();
 	},1000)
-	
 }
-
-/*
+function detectDoubleTapClosure() {
+  let lastTap = 0;
+  let timeout;
+  return function detectDoubleTap(event) {
+    const curTime = new Date().getTime();
+    const tapLen = curTime - lastTap;
+    if (tapLen < 500 && tapLen > 0) {
+      holdd();
+	  return true;
+      event.preventDefault();
+    } else {
+      timeout = setTimeout(() => {
+        clearTimeout(timeout);
+      }, 500);
+    }
+    lastTap = curTime;
+  };
+}
 Make bombs
 type = 3x3 block destroyer
 horizontal destroyer
