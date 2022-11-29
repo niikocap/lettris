@@ -30,7 +30,7 @@ function updateBlocks(){
 		block = document.createElement('div');
 		block.textContent = blocks[i].content.toUpperCase();
 		block.style.background = blocks[i].color;
-		block.setAttribute('onclick','holdd()')
+		block.setAttribute('onclick','holdd(this)')
 		block.classList.add('block');
 		gamebody.append(block);
 	}
@@ -107,8 +107,9 @@ function down(){
 	}
 }
 //Hold
-function holdd(){
+function holdd(x){
 	if(activeBlock == '') return
+	if(x.textContent == '') return
 	if (holdList.length <= 2) {
 		hold = []
 		hold.push(blocks[activeBlock].content)
