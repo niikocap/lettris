@@ -100,3 +100,40 @@
 	cursor: pointer;
 	margin-right: 10px;
 }
+.modal{
+	max-width: 700px;
+	width: 90%;
+	background: #6B728E;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	color: #fff;
+	box-shadow: 0 0 15px 0 rgba(250, 250, 250, .2);
+	transition: 1s;
+}.modal ul{
+	padding-left: 0;
+}.modal ul li{
+	list-style: none;
+	font-size: 15px;
+}.header{
+	font-size: 20px;
+	font-weight: 600;
+	padding: 5px;
+}.listDesc{
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px;
+}ion-icon{
+	position: relative;
+	padding: 0 5px;
+	top:2.5px;
+}.footer{
+	text-align: center;
+
+}.simple {
+	margin: 15px;
+	font-size: 20px;
+	letter-spacing: 10px;
+}.simple:hover{
+	color: #AAC4FF;
+}
