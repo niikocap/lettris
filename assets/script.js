@@ -30,6 +30,7 @@ function updateBlocks(){
 		block = document.createElement('div');
 		block.textContent = blocks[i].content.toUpperCase();
 		block.style.background = blocks[i].color;
+		block.setAttribute('onclick','holdd()')
 		block.classList.add('block');
 		gamebody.append(block);
 	}
