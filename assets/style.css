@@ -1,6 +1,6 @@
 *{
 	margin: 0 auto;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }.container1{
 	position: relative;
 	width: 360px;
@@ -26,6 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 15px;
+	cursor: pointer;
 }button{
 	background: none;
 	border: none;
@@ -133,7 +134,9 @@
 }.simple {
 	margin: 15px;
 	font-size: 20px;
-	letter-spacing: 10px;
+	font-weight: 600;
 }.simple:hover{
 	color: #AAC4FF;
+}.modal p{
+	padding: 5px;
 }
