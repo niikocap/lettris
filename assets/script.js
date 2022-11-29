@@ -475,7 +475,6 @@ function showNotif(x){
 		floatingNotif.style.opacity = '0'
 	},3000)
 }
-createBlocks();
 document.addEventListener('keydown', (e) => {
     if (e.keyCode == 37) {
         left();
@@ -505,8 +504,6 @@ container.addEventListener('touchend', function (event) {
     touchendY = event.changedTouches[0].screenY;
     handleGesture();
 }, false);
-
-
 function handleGesture() {
     nanika = Math.pow((touchendX - touchstartX),2)
 	nanikaa = Math.pow((touchendY - touchstartY),2)
@@ -520,7 +517,17 @@ function handleGesture() {
         down();
     }
 }
-updateBlocks();
+function playGame(){
+	modal = document.querySelector('.modal');
+	modal.style.opacity = 0;
+	setTimeout(function(){
+		modal.style.display = 'none';
+		createBlocks();
+		updateBlocks();
+	},1000)
+	
+}
+
 /*
 Make bombs
 type = 3x3 block destroyer
