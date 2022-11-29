@@ -478,13 +478,13 @@ function showNotif(x){
 	},3000)
 }
 document.addEventListener('keydown', (e) => {
-    if (e.keyCode == 37) {
+    if (e.keyCode == 37 || e.keyCode == 65) {
         left();
-    }else if(e.keyCode == 38){
+    }else if(e.keyCode == 38 || e.keyCode == 87){
     	bottom();
-    }else if(e.keyCode == 39){
+    }else if(e.keyCode == 39 || e.keyCode == 68){
     	right();
-    }else if(e.keyCode == 40){
+    }else if(e.keyCode == 40 || e.keyCode == 83){
     	down();
     }else if(e.key === '1' ){
     	releaseHold(0);
@@ -493,7 +493,7 @@ document.addEventListener('keydown', (e) => {
     }else if(e.key === '3'){
     	releaseHold(2);
     }else if(e.keyCode == 16){
-    	holdd()
+    	holdd(this)
     }
 });
 container.addEventListener('touchstart', function (event) {
@@ -522,6 +522,12 @@ function handleGesture() {
 function playGame(){
 	modal = document.querySelector('.modal');
 	modal.style.opacity = 0;
+	controls = document.querySelector('.controls');
+	controls.style.display = 'flex';
+	scoree = document.querySelector('.score');
+	scoree.style.display = 'block';
+	next = document.querySelector('.next');
+	next.style.display = 'flex';
 	setTimeout(function(){
 		modal.style.display = 'none';
 		createBlocks();
