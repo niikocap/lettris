@@ -45,6 +45,7 @@
 	font-weight: 600;
 	color: #fff;
 	text-align: center;
+	display: none;
 }.go{
 	font-size: 25px;
 }.controls{
@@ -57,7 +58,7 @@
 	display: flex;
 	flex-direction: row;
 }.next{
-	display: flex;
+	display: none;
 	flex-direction: row;
 	width: 360px;
 	justify-content: center;
@@ -105,7 +106,7 @@
 	max-width: 700px;
 	width: 90%;
 	background: #6B728E;
-	padding: 20px;
+	padding: 20px 20px 5px 20px;
 	box-sizing: border-box;
 	border-radius: 3px;
 	color: #fff;
@@ -139,4 +140,6 @@
 	color: #AAC4FF;
 }.modal p{
 	padding: 5px;
+}.controls{
+	display: none;
 }
