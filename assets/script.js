@@ -545,6 +545,7 @@ function detectDoubleTapClosure() {
     lastTap = curTime;
   };
 }
+/*
 Make bombs
 type = 3x3 block destroyer
 horizontal destroyer
