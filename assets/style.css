@@ -16,7 +16,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-flow: wrap;
-	width: 310px;
+	width: 350px;
 }.block, .nblock, .hblock{
 	height: 40px;
 	width: 40px;
@@ -28,7 +28,7 @@
 	justify-content: center;
 	font-size: 15px;
 	cursor: pointer;
-	border:2.5px solid #E5BA73;
+	border:5px solid #E5BA73;
 	box-sizing:border-box;
 	font-weight:600;
 }button{
